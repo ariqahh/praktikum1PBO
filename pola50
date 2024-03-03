@@ -1,0 +1,43 @@
+
+package pola50;
+
+import java.util.Scanner;
+
+public class Pola50 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        int angka = input.nextInt();
+        if (angka > 0) {
+            //pola pasangan
+            for (int i = 0; i < angka; i++) {
+                //print pola /
+                for (int j = 0; j < angka - i - 1; j++) {
+                    System.out.print(" ");                 
+                }
+                System.out.print("/");
+                
+                //print pola \
+                for (int j = 0; j < 2 * (i); j++) {
+                    System.out.print(" ");                
+                }
+                System.out.println("\\");               
+            }
+            //pola pasnagan \/
+            for (int i = 0; i < angka; i++) {
+                //print pola \
+                for (int j = 0; j < i; j++) {
+                    System.out.print(" ");              
+                }
+                System.out.print("\\");
+                //print pola /
+                for (int j = 0; j < 2 * (angka - i - 1); j++) {
+                    System.out.print(" ");                  
+                }
+                System.out.println("/");
+            }
+            
+        }
+    }
+    
+}
