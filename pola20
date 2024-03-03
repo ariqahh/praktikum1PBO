@@ -1,0 +1,32 @@
+
+package pola20;
+
+import java.util.Scanner;
+
+public class Pola20 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        int angka = input.nextInt();
+        //pola segitiga 1
+        for (int i = 0; i < angka; i++) {
+            for (int j = 0; j < angka - i - 1; j++) {
+                System.out.print("  ");
+            }
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        //pola segitiga 2
+        for (int i = 1; i < angka; i++) {
+            for (int j = 0; j < (angka - i); j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+          
+        
+    }
+    
+}
