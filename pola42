@@ -1,0 +1,48 @@
+
+package pola42;
+
+import java.util.Scanner;
+
+public class Pola42 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        System.out.print("rows : ");
+        int angka = input.nextInt();
+        int[]data = new int [angka];
+        for (int i = 0; i < angka; i++) {
+            data[i] = input.nextInt();
+        }
+        if (angka > 0) {
+            int max = 0;
+            for (int i = 0; i < angka; i++) {
+                int length = data[i];
+                max = Math.max(max, length);
+                //pola+---+
+                System.out.print("+");
+                if (length > 0) {
+                    for (int j = 0; j < max; j++) {
+                        System.out.print("---+");
+                    }  
+                }
+                System.out.println();
+                //pola |   |
+                System.out.print("|");
+                if (length > 0) {
+                    for (int j = 0; j < length; j++) {
+                        System.out.print("   |");
+                    }     
+                }
+                System.out.println();
+            
+        }
+        //baris terakhir
+        System.out.print("+");
+        for (int j = 0; j < max; j++) {
+            System.out.print("---+");
+        }
+        
+        }
+    }
+    
+}
