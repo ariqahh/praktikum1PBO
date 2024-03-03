@@ -1,0 +1,45 @@
+
+package pola44;
+
+import java.util.Scanner;
+
+public class Pola44 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        int angka = input.nextInt();
+        if (angka > 0) {
+            for (int i = 0; i < angka; i++) {
+                //pola space
+                for (int j = 0; j < (angka - i - 1); j++) {
+                    System.out.print("    ");
+                }
+                //pola +---+
+                System.out.print("+");
+                for (int j = 0; j <= i; j++) {
+                    System.out.print("---+");
+                }
+                System.out.println();
+                //pola space
+                for (int j = 0; j < (angka - i - 1); j++) {
+                    System.out.print("    ");
+                }
+                //pola |   |
+                System.out.print("|");
+                for (int j = 0; j <= i; j++) {
+                    System.out.print("   |");
+                }
+                System.out.println();
+            }
+            //penutup bawah
+            //pola +---+
+            System.out.print("+");
+            for (int i = 0; i < angka; i++) {
+                System.out.print("---+");
+            }
+            System.out.println();
+        
+    }
+    }
+    
+}
