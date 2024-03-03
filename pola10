@@ -1,0 +1,27 @@
+
+package pola10;
+
+import java.util.Scanner;
+
+public class Pola10 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        int angka = input.nextInt();
+        //print segitiga 1
+        for (int i = 0; i < angka; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+    }
+        //print segitiga 2
+        for (int i = angka - 1; i > 0; i--) {
+                for (int j = 0; j < i; j++) {
+                    System.out.print("* ");
+            }
+            System.out.println();
+        }
+    
+}
+}
