@@ -1,0 +1,48 @@
+
+package pola48;
+
+import java.util.Scanner;
+
+public class Pola48 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        int angka = input.nextInt();
+        int angka1 = input.nextInt();
+        if (angka > 0 && angka1 > 0) {
+            //pola +---+ atas
+            System.out.print("+");
+            for (int j = 0; j < angka1; j++) {
+                System.out.print("---+");               
+            }
+            System.out.println();
+            
+            //pola tengah
+            for (int i = 0; i < angka; i++) {
+                //pola |  |
+                System.out.print("|");
+                for (int j = 0; j < angka1 - 1; j++) {
+                    System.out.print("    ");                   
+                }
+                System.out.println("   |");
+                //pola +   +
+                if (i < angka - 1) {
+                    System.out.print("+");
+                    for (int j = 0; j < angka1 - 1; j++) {
+                        System.out.print("    ");
+                        
+                    }
+                    System.out.println("   +");   
+                }               
+            }
+            //pola +---+ bawah
+            System.out.print("+");
+            for (int j = 0; j < angka1; j++) {
+                System.out.print("---+");              
+            }
+            System.out.println();
+            
+        }
+    }
+    
+}
