@@ -1,0 +1,52 @@
+
+package pola40;
+
+import java.util.Scanner;
+
+public class Pola40 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        System.out.print("rows : ");
+        int angka = input.nextInt();
+        System.out.print("cols : ");
+        int angka1 = input.nextInt();
+        String []data = new String [angka];
+        for (int i = 0; i < angka; i++) {
+            data[i] = input.next();
+        }
+        //print
+        if (angka > 0 && angka1 > 0) {
+            //print baris atas
+            System.out.print("+");
+            for (int j = 0; j < angka1; j++) {
+                System.out.print("---+");
+            }
+            System.out.println();
+            for (int i = 0; i < angka; i++) {
+                // print baris tengah
+                System.out.print("|");
+                for (int j = 0; j < angka1; j++) {
+                    String sbaris = String.valueOf(data[i].charAt(j));
+                    int value = Integer.parseInt(sbaris);
+                    if (value == 0) {
+                        System.out.print(" o |");
+                    } else if (value == 1) {
+                        System.out.print(" x |");
+                    }else {
+                        System.out.println("   |");
+                    }
+                }
+                System.out.println();
+                
+                //print baris bawah
+                System.out.print("+");
+                for (int j = 0; j < angka1; j++) {
+                System.out.print("---+");
+            }
+            System.out.println();
+        }
+        
+    }
+    } 
+}
