@@ -1,0 +1,25 @@
+
+package pola25;
+
+import java.util.Scanner;
+
+public class Pola25 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        int angka = input.nextInt(); //baris
+        int angka1 = input.nextInt();//kolom
+        for (int i = 0; i < angka; i++) {
+            for (int j = 0; j < angka1; j++) {
+                if (i % 2 == 0) {
+                    System.out.print("+ ");
+                }else {
+                    System.out.print("= ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    
+}
+
