@@ -1,0 +1,35 @@
+
+package pola32;
+
+import java.util.Scanner;
+
+public class Pola32 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        int angka = input.nextInt();
+        if (angka > 0) {
+            //print baris atas
+            System.out.print("+");
+            for (int i = 0; i < angka; i++) {
+                System.out.print("---+");
+            }
+            System.out.println();
+            
+            //print baris tengah
+            System.out.print("|");
+            for (int i = 0; i < angka; i++) {
+                System.out.print(" x |");
+            }
+            System.out.println();
+            
+            //print baris bawah
+            System.out.print("+");
+            for (int i = 0; i < angka; i++) {
+                System.out.print("---+");
+            }
+            System.out.println();
+        }
+    }
+    
+}
