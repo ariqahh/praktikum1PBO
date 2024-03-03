@@ -1,0 +1,44 @@
+
+package pola34;
+
+import java.util.Scanner;
+
+public class Pola34 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        String st = input.next();
+        int angka = st.length();
+        if (angka > 0) {
+            //print baris atas
+            System.out.print("+");
+            for (int i = 0; i < angka; i++) {
+                System.out.print("---+");
+            }
+            System.out.println();
+            
+            //print baris tengah
+            System.out.print("|");
+            for (int i = 0; i < angka; i++) {
+                int value = Integer.parseInt(String.valueOf(st.charAt(i)));
+                if (value == 1) {
+                    System.out.print(" x |");
+                } else if (value == 0) {
+                    System.out.print(" o |");
+                }else {
+                        System.out.println("   |");
+                }
+            }
+            System.out.println();
+            
+            //print baris bawah
+            System.out.print("+");
+            for (int i = 0; i < angka; i++) {
+                System.out.print("---+");
+            }
+            System.out.println();
+        }
+        
+    }
+    
+}
